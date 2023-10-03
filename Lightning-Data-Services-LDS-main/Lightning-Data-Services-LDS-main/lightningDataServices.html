@@ -1,0 +1,31 @@
+<template>
+    <!-- record form section -->
+    <lightning-card title="Contact with Record form">
+        <lightning-record-form object-api-name="Contact" record-id={recordId} fields={fields}></lightning-record-form>
+    </lightning-card>
+    <!-- record form section end-->
+
+    <!-- record edit form section start-->
+    <lightning-card title="Contact with Record Edit Form">
+        <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId} >
+            <lightning-input-field field-name={nameField}></lightning-input-field>
+            <lightning-input-field field-name={phoneField}></lightning-input-field>
+
+            <div class="slds-align_absolute-center">
+                <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+
+    <!-- record edit form section end-->
+
+    <!-- record view form section start-->
+    <lightning-card title="Contact with Record View Form">
+        <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+            <lightning-output-field field-name={nameField}></lightning-output-field>
+            <lightning-output-field field-name={phoneField}></lightning-output-field>
+        </lightning-record-view-form>
+    </lightning-card>
+
+    <!-- record view form section end-->
+</template>
